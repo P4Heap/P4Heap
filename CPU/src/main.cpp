@@ -13,7 +13,6 @@
 int main()
 {
     Dataset stream("../dataset/caida.dat", 21);
-    // Dataset stream("../dataset/webpage.dat", 4);
 
     int mem = 60'000;
 
@@ -70,36 +69,4 @@ int main()
         Elastic cm1(mem, 2);
         test(stream, fn, cm1);
     }
-
-    // for (int mem = 50'000; mem<=500'000;mem+=50'000)
-    // {
-    //     LOG_INFO("Memory: %d", mem);
-    //     RHHH cm(mem, 0);
-    //     test(stream, cm);
-
-    //     RHHH cm1(mem, 1);
-    //     test(stream, cm1);
-    // }
-
-    // for (int mem=5'000; mem<=50'000; mem+=5'000)
-    // {
-    //     LOG_INFO("Memory: %d", mem);
-    //     Elastic cm(mem*2, 4);
-    //     test(stream, cm);
-
-    //     Funnel fn(mem);
-    //     Elastic cm1(mem, 2);
-    //     test(stream, fn, cm1);
-    // }
-
-    // for (int mem=10'000; mem<=100'000; mem+=10'000)
-    // {
-    //     LOG_INFO("Memory: %d", mem);
-    //     Coco cm(mem*2, 2);
-    //     test(stream, cm);
-
-    //     Funnel fn(mem);
-    //     Coco cm1(mem, 2);
-    //     test(stream, fn, cm1);
-    // }
 }
